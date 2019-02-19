@@ -1,13 +1,41 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <el-container>
+      <el-aside width="200px">
+        <ul id="nav">
+          <li>
+            <router-link to="/">Home</router-link>
+          </li>
+          <li>
+            <router-link to="/element">Element</router-link>
+            </li>
+          <li>
+            <router-link to="/vuetify">Vuetify</router-link>
+          </li>
+        </ul>
+      </el-aside>
+      <el-container>
+        <el-header></el-header>
+        <el-main><router-view /></el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
+<script>
+export default {
+  name: "app",
+  // data() {
+  //   return {
+  //     hello: "Hello world!"
+  //   } 
+  // },
+  // mounted() {
 
+  // },
+  // methods: {
+  // }
+};
+</script>
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -16,14 +44,24 @@
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+ul#nav {
+  padding: 0px;
+  li {
+    list-style: none;
+    padding: 1em;
+    font-size: 2em;
+    .router-link-exact-active {
+      color: green;
+    }
+    a {
+      text-decoration: none;
+      color: lightgrey;
+      &:hover {
+        transition: color 0.25s ease-in-out;
+        color: black;
+      }
     }
   }
+  
 }
 </style>
