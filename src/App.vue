@@ -8,9 +8,12 @@
           </li>
           <li>
             <router-link to="/element">Element</router-link>
-            </li>
+          </li>
           <li>
             <router-link to="/vuetify">Vuetify</router-link>
+          </li>
+          <li>
+            <router-link to="/vuex">Vuex</router-link>
           </li>
         </ul>
       </el-aside>
@@ -23,17 +26,7 @@
 </template>
 <script>
 export default {
-  name: "app",
-  // data() {
-  //   return {
-  //     hello: "Hello world!"
-  //   } 
-  // },
-  // mounted() {
-
-  // },
-  // methods: {
-  // }
+  name: "app"
 };
 </script>
 <style lang="scss">
@@ -45,7 +38,7 @@ export default {
   color: #2c3e50;
 }
 ul#nav {
-  padding: 0px;
+  padding: 0;
   li {
     list-style: none;
     padding: 1em;
@@ -62,6 +55,5 @@ ul#nav {
       }
     }
   }
-  
 }
 </style>

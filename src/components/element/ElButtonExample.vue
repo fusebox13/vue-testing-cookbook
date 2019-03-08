@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       counter: 0
-    }
+    };
   },
   methods: {
     handleClick() {
@@ -22,5 +22,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

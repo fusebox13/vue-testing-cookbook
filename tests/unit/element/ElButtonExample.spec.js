@@ -1,8 +1,8 @@
 import { expect } from "chai";
-import { shallowMount, mount } from "@vue/test-utils";
-import Vue from 'vue';
+import { mount } from "@vue/test-utils";
+import Vue from "vue";
 import ElButtonExample from "@/components/element/ElButtonExample.vue";
-import ElementUI, {ElButton} from "element-ui";
+import ElementUI from "element-ui";
 
 Vue.use(ElementUI);
 describe("ElButtonExample", () => {
@@ -23,23 +23,22 @@ describe("ElButtonExample", () => {
 
     after(() => {
       //Cleanup
-      button, badge = null;
+      button = null;
+      badge = null;
     });
 
     it("should not increment if not clicked", async () => {
-      expect(badge.text()).to.equal('0');
+      expect(badge.text()).to.equal("0");
     });
 
     it("should increment if clicked via trigger", async () => {
-      button.trigger('click');
-      expect(badge.text()).to.equal('1');
+      button.trigger("click");
+      expect(badge.text()).to.equal("1");
     });
 
     it("should increment if clicked via emit", async () => {
-      button.vm.$emit('click');
-      expect(badge.text()).to.equal('1');
+      button.vm.$emit("click");
+      expect(badge.text()).to.equal("1");
     });
-
-
   });
 });

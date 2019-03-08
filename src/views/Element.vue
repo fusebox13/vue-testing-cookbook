@@ -4,21 +4,21 @@
       <div class="element-title">
         Element Button
       </div>
-        <ElButtonExample/>
+      <ElButtonExample />
     </div>
 
     <div class="element-component">
       <div class="element-title">
         Element Slider
-        </div>
-        <ElSliderExample/>
       </div>
+      <ElSliderExample />
+    </div>
   </div>
 </template>
 
 <script>
-import ElButtonExample from '@/components/element/ElButtonExample';
-import ElSliderExample from '@/components/element/ElSliderExample';
+import ElButtonExample from "@/components/element/ElButtonExample";
+import ElSliderExample from "@/components/element/ElSliderExample";
 
 export default {
   name: "elementio",
@@ -34,6 +34,6 @@ export default {
   color: green;
 }
 .element-component {
-  margin-bottom: 80px
+  margin-bottom: 80px;
 }
 </style>

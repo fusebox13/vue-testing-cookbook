@@ -5,8 +5,7 @@
 </template>
 
 <script>
-
 export default {
-  name: "vuetify",
+  name: "vuetify"
 };
 </script>
