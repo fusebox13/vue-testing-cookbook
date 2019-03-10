@@ -1,5 +1,6 @@
 const state = {
-  example: "Example State"
+  example: "Example State",
+  randomDogUrl: ""
 };
 
 export { state };

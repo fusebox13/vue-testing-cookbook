@@ -1,8 +1,19 @@
 const actions = {
-  fetchRandomDog() {
-    fetch("https://random.dog/woof.json")
+  fetchRandomDog({ commit }, endpoint) {
+    fetch(endpoint)
       .then(response => response.json())
-      .then(({ url }) => console.log(url));
+      .then(({ url }) => commit("setRandomDogUrl", url));
+  },
+  async fetchRandomDogAsync({ commit }, service) {
+    await service
+      .getRandomDog()
+      .then(response => {
+        return response.json();
+      })
+      .then(({ url }) => commit("setRandomDogUrl", url))
+      .catch(() => {
+        commit("setRandomDogUrl", "Not Found");
+      });
   }
 };
 

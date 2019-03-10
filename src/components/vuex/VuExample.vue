@@ -1,13 +1,23 @@
 <template>
-  <div data-qa="state">{{ example }}</div>
+  <div>
+    <div data-qa="state">{{ example }}</div>
+    <div data-qa="dog-url">{{ randomDogUrl }}</div>
+  </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   name: "VuExample",
+  inject: ["DogService"],
   computed: {
-    ...mapState("Example", ["example"])
+    ...mapState("Example", ["example", "randomDogUrl"])
+  },
+  methods: {
+    ...mapActions("Example", ["fetchRandomDogAsync"])
+  },
+  created() {
+    this.fetchRandomDogAsync(this.DogService);
   }
 };
 </script>
