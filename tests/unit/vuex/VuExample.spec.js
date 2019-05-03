@@ -13,7 +13,6 @@ describe("VuExample", () => {
   let state = {
     example: "Example State",
     randomDogUrl: ""
-
   };
   let store;
 

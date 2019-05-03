@@ -1,5 +1,5 @@
 const getRandomDog = function() {
-  return fetch("https://rrandom.dog/woof.json");
+  return fetch("https://random.dog/woof.json");
 };
 
 export default {
