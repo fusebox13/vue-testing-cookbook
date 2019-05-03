@@ -15,6 +15,9 @@
           <li>
             <router-link to="/vuex">Vuex</router-link>
           </li>
+          <li>
+            <router-link to="/chartjs">Chart.js</router-link>
+          </li>
         </ul>
       </el-aside>
       <el-container>

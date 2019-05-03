@@ -2,6 +2,7 @@
   <div>
     <div data-qa="state">{{ example }}</div>
     <div data-qa="dog-url">{{ randomDogUrl }}</div>
+    <img :src="randomDogUrl"/>
   </div>
 </template>
 
