@@ -15,8 +15,6 @@ export default {
   },
   mounted() {
     var ctx = this.$refs.chartjs;
-    console.log(ctx);
-    
     var myChart = new this.Chart(ctx, {
         type: 'bar',
         data: {
@@ -53,6 +51,8 @@ export default {
             }
         }
     });
+
+    myChart.destroy();
 
   }
 };
